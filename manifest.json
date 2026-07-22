@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "PHub Downloader",
+  "version": "1.0.0",
+  "description": "Download videos from PornHub with quality selection - Made by @7Boi.999",
+  "permissions": [
+    "downloads",
+    "activeTab",
+    "scripting",
+    "tabs",
+    "webNavigation",
+    "declarativeNetRequestWithHostAccess"
+  ],
+  "host_permissions": [
+    "https://*.pornhub.com/*",
+    "https://*.pornhubpremium.com/*",
+    "https://*.phncdn.com/*"
+  ],
+  "icons": {
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  }
+}
